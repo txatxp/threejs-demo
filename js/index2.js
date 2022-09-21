@@ -53,6 +53,8 @@ renderer.setSize(width, height);
  //设置背景颜色
 renderer.setClearColor(0xb9d3ff, 1);
 
+let OrbitControlsObj = new THREE.OrbitControls(camera, renderer.domElement)
+OrbitControlsObj.enabled = true;
 //点光源添加到场景中
 scene.add(point); 
 /**
@@ -66,3 +68,8 @@ document.body.appendChild(renderer.domElement);
 //执行渲染操作   指定场景、相机作为参数
 renderer.render(scene, camera);
 
+function renderFn(){
+  renderer.render(scene, camera)
+  requestAnimationFrame(renderFn)
+}
+renderFn()
