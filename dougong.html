@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://exhibition.jingqiweb.com/dougong/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拼接抖拱</title>
+    <style>
+        *{
+            margin:0px;padding:0px;
+        }
+        html,body {
+            overflow: hidden;
+            -webkit-touch-callout:none;
+            -webkit-user-select:none;
+            -khtml-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            background-color: #ebfcfd;
+        }
+        .data-box {
+            width:100%;position:fixed;top:0px;left:0px;background:rgba(0,0,0,0);
+            z-index: 999;overflow: hidden;pointer-events: none;
+        }
+        .data-number {
+            width: 100%;float:left;height: 30px;line-height: 30px;color:#000;;
+            pointer-events: none;font-size:12px;
+        }
+        .btn-box {
+            position: absolute;width: 30%;height: 100%;top:0px;left:-999999px;bottom:0px;z-index: 999;
+            display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: center;
+
+        }
+        .btn-list {
+            padding-top: 10px;cursor: pointer;
+        }
+        .float-let {
+            float: left;
+        }
+        .float-rgt {
+            float: right;
+        }
+        .btn-list img {
+            border-radius: 50%;box-shadow: 1px 1px 5px #666;
+        }
+        .btn-list img:hover {
+            box-shadow: 1px 1px 25px #83b9ef;
+        }
+        .text{
+            text-align: center;font-size: 13px;font-weight: bold;
+        }
+        .wanc {
+            position: absolute;height: 54px;top: 50%;margin-top: -26px;left: 50%;margin-left: -115px;transition: all 1s linear;
+            opacity: 0;
+        }
+        .animated.infinite {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        .bounceInDown {
+            -webkit-animation-name: bounceInDown;
+            animation-name: bounceInDown;
+        }
+        .animated {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            opacity: 1;
+        }
+        @-webkit-keyframes bounceInDown {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -3000px, 0) scaleY(3);
+                transform: translate3d(0, -3000px, 0) scaleY(3);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 25px, 0) scaleY(0.9);
+                transform: translate3d(0, 25px, 0) scaleY(0.9);
+            }
+
+            75% {
+                -webkit-transform: translate3d(0, -10px, 0) scaleY(0.95);
+                transform: translate3d(0, -10px, 0) scaleY(0.95);
+            }
+
+            90% {
+                -webkit-transform: translate3d(0, 5px, 0) scaleY(0.985);
+                transform: translate3d(0, 5px, 0) scaleY(0.985);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            }
+            @keyframes bounceInDown {
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -3000px, 0) scaleY(3);
+                transform: translate3d(0, -3000px, 0) scaleY(3);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 25px, 0) scaleY(0.9);
+                transform: translate3d(0, 25px, 0) scaleY(0.9);
+            }
+
+            75% {
+                -webkit-transform: translate3d(0, -10px, 0) scaleY(0.95);
+                transform: translate3d(0, -10px, 0) scaleY(0.95);
+            }
+
+            90% {
+                -webkit-transform: translate3d(0, 5px, 0) scaleY(0.985);
+                transform: translate3d(0, 5px, 0) scaleY(0.985);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            }
+            .po {
+                position: relative;
+            }
+            .po2 {
+                overflow: hidden;width: 100%;text-align: center;
+            }
+
+            .arc {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 50%;
+                -webkit-animation: spin ease 1.4s infinite both;
+                animation: spin ease 1.4s infinite both;
+            }
+            .arc:nth-child(1) {
+                background: #E31D28;
+                width: 490px;
+                height: 490px;
+                margin-left: -245px;
+                margin-top: -245px;
+                clip: rect(0 490px 245px 0);
+                -webkit-animation-delay: 1.2s;
+                animation-delay: 1.2s;
+            }
+            .arc:nth-child(2) {
+                background: #ED8C3D;
+                width: 420px;
+                height: 420px;
+                margin-left: -210px;
+                margin-top: -210px;
+                clip: rect(0 420px 210px 0);
+                -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+            }
+            .arc:nth-child(3) {
+                background: #FCD234;
+                width: 350px;
+                height: 350px;
+                margin-left: -175px;
+                margin-top: -175px;
+                clip: rect(0 350px 175px 0);
+                -webkit-animation-delay: 0.8s;
+                animation-delay: 0.8s;
+            }
+            .arc:nth-child(4) {
+                background: #3E9965;
+                width: 280px;
+                height: 280px;
+                margin-left: -140px;
+                margin-top: -140px;
+                clip: rect(0 280px 140px 0);
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+            }
+            .arc:nth-child(5) {
+                background: #295167;
+                width: 210px;
+                height: 210px;
+                margin-left: -105px;
+                margin-top: -105px;
+                clip: rect(0 210px 105px 0);
+                -webkit-animation-delay: 0.4s;
+                animation-delay: 0.4s;
+            }
+            .arc:nth-child(6) {
+                background: #492245;
+                width: 140px;
+                height: 140px;
+                margin-left: -70px;
+                margin-top: -70px;
+                clip: rect(0 140px 70px 0);
+                -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s;
+            }
+            .arc:nth-child(7) {
+                background: #FDFAD8;
+                width: 70px;
+                height: 70px;
+                margin-left: -35px;
+                margin-top: -35px;
+                clip: rect(0 70px 35px 0);
+                -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+            }
+            #rainbow {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%) scale(0.5);
+                transform: translate(-50%, -50%) scale(0.5);
+                width: 490px;
+                height: 490px;
+            }
+            @-webkit-keyframes spin {
+                from {
+                    -webkit-transform: rotateZ(-180deg);
+                    transform: rotateZ(-180deg);
+                }
+                to {
+                    -webkit-transform: rotateZ(180deg);
+                    transform: rotateZ(180deg);
+                }
+            }
+            @keyframes spin {
+                from {
+                    -webkit-transform: rotateZ(-180deg);
+                    transform: rotateZ(-180deg);
+                }
+                to {
+                    -webkit-transform: rotateZ(180deg);
+                    transform: rotateZ(180deg);
+                }
+            }
+            .rainbow-box {
+                position:absolute;width: 100%;height: 100%;top:0px;left: 0px;bottom: 0px;
+                background-color: #ebfcfd;z-index: 999999;
+            }
+            .reload {
+                width: 30px;position: absolute;top:0px;right:-43px;cursor: pointer;
+            }
+    </style>
+    <script src="./拼接抖拱_files/three.js.下载"></script>
+    <script src="./拼接抖拱_files/OrbitControls.js.下载"></script>
+    <script src="./拼接抖拱_files/OBJLoader.js.下载"></script>
+    <script src="./拼接抖拱_files/MTLLoader.js.下载"></script>
+    <script src="./拼接抖拱_files/TransformControls.js.下载"></script>
+    <script src="./拼接抖拱_files/TrackballControls.js.下载"></script>
+    <script src="./拼接抖拱_files/BufferGeometryUtils.js.下载"></script>
+    <script src="./拼接抖拱_files/DragControls.js.下载"></script>
+    <script src="./拼接抖拱_files/tween.umd.js.下载"></script>
+</head>
+<body>
+    <div class="btn-box" id="btn-box" style="left: 0px;">
+        <div class="po">
+
+                <div class="btn-list" id="btn-list-play">
+                    <img src="./拼接抖拱_files/pay.png" width="50" alt="">
+                    <div class="text">开始</div>
+                </div>    
+                <div class="btn-list" id="btn-list-return">
+                    <img src="./拼接抖拱_files/cx.png" width="50" alt="">
+                    <div class="text">撤回</div>
+                </div>
+            
+                    <div class="btn-list " id="btn-list-next">
+                        <img src="./拼接抖拱_files/next.png" width="50" alt="">
+                        <div class="text">下一步</div>
+                    </div>
+                    <div class="btn-list" id="btn-list-prev">
+                        <img src="./拼接抖拱_files/prev.png" width="50" alt="">
+                        <div class="text">上一步</div>
+                    </div>      
+               
+                    <img src="./拼接抖拱_files/reload.png" class="reload" id="reload" alt="">
+        </div>    
+    </div>
+    <img src="./拼接抖拱_files/wanc.png" class="wanc" id="wanc" alt="" style="top: 377px;">
+    <div class="rainbow-box" id="rainbow-box" style="display: none;">
+        <div id="rainbow">
+            <div class="arc"></div>
+            <div class="arc"></div>
+            <div class="arc"></div>
+            <div class="arc"></div>
+            <div class="arc"></div>
+            <div class="arc"></div>
+            <div class="arc"></div>
+            <div class="arc"></div>
+        </div>    
+    </div>
+    <script src="./拼接抖拱_files/index.js.下载"></script><script src="./拼接抖拱_files/dougong.js.下载"></script>
+
+<canvas data-engine="three.js r135" width="858" height="872" style="display: block; width: 687px; height: 698px; touch-action: none; cursor: auto;"></canvas></body></html>
