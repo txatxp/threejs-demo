@@ -29,7 +29,7 @@ MTLLoader.load(mtlFile, function(materials) {
     // 物体碎片化处理 合并 打包
     setTimeout(() => {
       mergeMaterialGeometryMesh(obj)
-    }, 2000)
+    })
   })
 })
 // 物体碎片化处理 合并 打包;包括物体、材质、模型
@@ -63,7 +63,6 @@ function mergeMaterialGeometryMesh(obj) {
   group2.scale.set(1,1,1)
   group2.position.set(0,0,0)
   scene.add(group2)
-  console.log(12)
 }
 
 /**
